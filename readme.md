@@ -1,8 +1,10 @@
 # ChatGPT Restaurant Assistant
+![Getting Started](./restaurant_chatbot.jpg)
+
 
 **GitHub Repository:** [Restaurant Chatbot](https://github.com/anzarshah/chatbot-restauranthttps://github.com)
 
-## Overview
+ 
 A conversational AI chatbot designed to assist restaurant customers. Powered by OpenAI's GPT-3.5, the assistant offers a seamless interactive experience, providing menu recommendations and answering common customer queries.
 
 ## Key Features
