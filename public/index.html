@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e9f0f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-left: 5%;
+    }
+
+    #container {
+      width: 90%;
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #header {
+      background: #832626;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #chatbox {
+      flex: 1;
+      border: none;
+      padding: 15px;
+      overflow-y: auto;
+      background: #f8f9fc;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    #chatbox p {
+      margin: 10px 0;
+    }
+
+    #chatbox strong {
+      color: #832626;
+    }
+
+    #inputArea {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: #f4f6fa;
+      border-top: 1px solid #ddd;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    #userInput:focus {
+      border-color: #832626;
+    }
+
+    #sendButton {
+      padding: 10px 20px;
+      background: #832626;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    #sendButton:hover {
+      background: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="header">Chat With Bawarchi Restaurant Assistant</div>
+    <div id="chatbox"></div>
+    <div id="inputArea">
+      <input type="text" id="userInput" placeholder="Type your message here...">
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const chatbox = document.getElementById('chatbox');
+    const userInput = document.getElementById('userInput');
+    const sendButton = document.getElementById('sendButton');
+
+    sendButton.addEventListener('click', async () => {
+      const userMessage = userInput.value.trim();
+      if (!userMessage) return;
+
+      // Display user message
+      chatbox.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
+      userInput.value = '';
+
+      // Send message to server
+      try {
+        const response = await fetch('/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: userMessage }),
+        });
+
+        const data = await response.json();
+        const botMessage = data.response;
+
+        // Display bot response
+        chatbox.innerHTML += `<p><strong>Bot:</strong> ${botMessage}</p>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+      } catch (error) {
+        chatbox.innerHTML += `<p style="color: red;">Error: ${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

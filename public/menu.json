@@ -1,0 +1,166 @@
+{
+  "message": "I want to order something good.",
+  "isFirstInteraction": true
+}
+
+
+{
+
+  
+  "restaurant": {
+    "name": "Bawarchi Biryanis",
+    "location": {
+      "address": "1801 N Greenville Ave, 250, Richardson, TX 75081",
+      "phone": "(972) 474-8844",
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "11AM–9PM",
+        "wednesday": "11AM–9PM",
+        "thursday": "11AM–9PM",
+        "friday": "11AM–10PM",
+        "saturday": "9AM–10PM",
+        "sunday": "9AM–9PM"
+      }
+    },
+    "categories": [
+      "weekday lunch specials",
+      "brunch menu",
+      "takeout menu",
+      "party trays",
+      "Indo-Chinese menu",
+      "evening snacks",
+      "vegan menu",
+      "kids menu - dine-in"
+    ],
+    "menu": {
+      "weekday lunch specials": [
+        {
+          "item": "Veg Sandwich",
+          "description": "Brioche Bun with Choice of Filling",
+          "price": "$7.00"
+        },
+        {
+          "item": "Non-Veg Sandwich",
+          "description": "Brioche Bun with Choice of Filling",
+          "price": "$8.90"
+        },
+        {
+          "item": "Quesadilla - Veg",
+          "description": "Classic quesadilla filled with cheese and choice of filling",
+          "price": "$8.90"
+        },
+        {
+          "item": "Quesadilla - Non-Veg",
+          "description": "Classic quesadilla filled with cheese and choice of filling",
+          "price": "$9.90"
+        },
+        {
+          "item": "Taco - Veg (3)",
+          "description": "Roti taco with choice of filling",
+          "price": "$8.90"
+        },
+        {
+          "item": "Taco - Non-Veg (3)",
+          "description": "Roti taco with choice of filling",
+          "price": "$9.90"
+        },
+        {
+          "item": "Biryani Burrito - Veg",
+          "description": "Classic burrito with a biryani twist filled with aromatic biryani rice and choice of protein",
+          "price": "$8.90"
+        },
+        {
+          "item": "Biryani Burrito - Non-Veg",
+          "description": "Classic burrito with a biryani twist filled with aromatic biryani rice and choice of protein",
+          "price": "$9.90"
+        }
+      ],
+      "brunch menu": [
+        {
+          "item": "Idli (3)",
+          "description": "Steamed rice and lentil cakes",
+          "price": "$7.90"
+        },
+        {
+          "item": "Masala Dosa & Idli Combo",
+          "description": "Masala Dosa and 2 Idlis served with Sambhar and Chutney",
+          "price": "$10.90"
+        },
+        {
+          "item": "Egg & Cheese Sandwich",
+          "description": "2 eggs & cheese on Brioche Bun",
+          "price": "$7.90"
+        }
+      ],
+      "Indo-Chinese menu": [
+        {
+          "item": "Veg Spring Rolls (4)",
+          "description": "Mixed vegetables in a crispy wonton shell",
+          "price": "$7.90"
+        },
+        {
+          "item": "Gobi Manchurian (v)",
+          "description": "Crispy cauliflower with hot and sweet sauce, scallions",
+          "price": "$11.90"
+        },
+        {
+          "item": "Chilli Paneer",
+          "description": "Paneer with onions and peppers in chili sauce",
+          "price": "$13.90"
+        },
+        {
+          "item": "Hakka Noodles",
+          "description": "Soft noodles with cabbage, carrots, peas, scallions, soy sauce",
+          "price": "$13.90"
+        }
+      ],
+      "vegan menu": [
+        {
+          "item": "Vegan Samosa",
+          "price": "$4.90"
+        },
+        {
+          "item": "Vegan Masala Dosa",
+          "price": "$10.90"
+        },
+        {
+          "item": "Vegan Tawa Tofu Biryani",
+          "price": "$12.90"
+        },
+        {
+          "item": "Vegan Saag Tofu",
+          "price": "$13.90"
+        }
+      ],
+      "kids menu": [
+        {
+          "item": "Kids Butter Chicken with Rice",
+          "price": "$8.90"
+        },
+        {
+          "item": "Kids Veg Noodles",
+          "price": "$8.90"
+        },
+        {
+          "item": "Kids Paneer Tikka Pasta",
+          "price": "$8.90"
+        }
+      ],
+      "party trays": [
+        {
+          "item": "PT - Hyderabadi Dum Biryani",
+          "description": "Avg serving size for 6-10 Guests. Order multiple trays depending on your party size. Requires 3-hour notice.",
+          "price": "$54.90"
+        },
+        {
+          "item": "PT - Chicken Tikka Kabob",
+          "price": "$79.90"
+        },
+        {
+          "item": "PT - Paneer Curry",
+          "price": "$74.90"
+        }
+      ]
+    }
+  }
+}
